@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>SmartVisionQA 自动化测试报告</title>
+
+<style>
+
+body {
+    font-family:
+        Arial,
+        "Microsoft YaHei",
+        sans-serif;
+
+    margin: 30px;
+
+    background-color: #f5f7fa;
+
+    color: #333;
+}
+
+.container {
+    max-width: 1500px;
+
+    margin: auto;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 2px 10px
+        rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    margin-top: 0;
+
+    color: #222;
+}
+
+.subtitle {
+    color: #666;
+
+    margin-bottom: 30px;
+}
+
+.summary {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.card {
+    min-width: 150px;
+
+    padding: 18px;
+
+    border-radius: 8px;
+
+    background-color: #f0f2f5;
+}
+
+.card-title {
+    font-size: 14px;
+
+    color: #666;
+
+    margin-bottom: 8px;
+}
+
+.card-value {
+    font-size: 26px;
+
+    font-weight: bold;
+}
+
+.pass-card {
+    background-color: #e8f5e9;
+}
+
+.fail-card {
+    background-color: #ffebee;
+}
+
+.error-card {
+    background-color: #fff3e0;
+}
+
+.rate-card {
+    background-color: #e3f2fd;
+}
+
+.status-pass {
+    color: #16803c;
+
+    font-weight: bold;
+}
+
+.status-fail {
+    color: #d32f2f;
+
+    font-weight: bold;
+}
+
+.status-error {
+    color: #ef6c00;
+
+    font-weight: bold;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.result-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 20px;
+
+    font-size: 14px;
+}
+
+.result-table th {
+    background-color: #263238;
+
+    color: white;
+
+    padding: 10px;
+
+    text-align: left;
+
+    white-space: nowrap;
+}
+
+.result-table td {
+    border-bottom:
+        1px solid #ddd;
+
+    padding: 9px;
+
+    vertical-align: top;
+}
+
+.result-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.result-table tr:hover {
+    background-color: #eef3f8;
+}
+
+.footer {
+    margin-top: 30px;
+
+    color: #888;
+
+    font-size: 13px;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+<h1>
+SmartVisionQA 自动化测试报告
+</h1>
+
+<div class="subtitle">
+图片 / 视频自动化质量检测原型
+</div>
+
+
+<div class="summary">
+
+<div class="card">
+<div class="card-title">
+总测试文件
+</div>
+
+<div class="card-value">
+10
+</div>
+</div>
+
+
+<div class="card pass-card">
+<div class="card-title">
+PASS
+</div>
+
+<div class="card-value">
+1
+</div>
+</div>
+
+
+<div class="card fail-card">
+<div class="card-title">
+FAIL
+</div>
+
+<div class="card-value">
+9
+</div>
+</div>
+
+
+<div class="card error-card">
+<div class="card-title">
+ERROR
+</div>
+
+<div class="card-value">
+0
+</div>
+</div>
+
+
+<div class="card rate-card">
+<div class="card-title">
+通过率
+</div>
+
+<div class="card-value">
+10.00%
+</div>
+</div>
+
+</div>
+
+
+<h2>
+测试明细
+</h2>
+
+<div class="table-wrapper">
+
+<table border="1" class="dataframe result-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>filename</th>
+      <th>file_type</th>
+      <th>io_status</th>
+      <th>width</th>
+      <th>height</th>
+      <th>fps</th>
+      <th>frame_count</th>
+      <th>duration</th>
+      <th>blur_score</th>
+      <th>brightness_score</th>
+      <th>resolution_status</th>
+      <th>blur_status</th>
+      <th>exposure_status</th>
+      <th>fps_status</th>
+      <th>verdict</th>
+      <th>failure_reason</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>blurred.jpg</td>
+      <td>image</td>
+      <td>OK</td>
+      <td>4032.0</td>
+      <td>3024.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.89</td>
+      <td>130.64</td>
+      <td>OK</td>
+      <td>BLURRY</td>
+      <td>OK</td>
+      <td>NaN</td>
+      <td><span class="status-fail">FAIL</span></td>
+      <td>BLURRY</td>
+    </tr>
+    <tr>
+      <td>bright.jpg</td>
+      <td>image</td>
+      <td>OK</td>
+      <td>4032.0</td>
+      <td>3024.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>12.72</td>
+      <td>230.02</td>
+      <td>OK</td>
+      <td>OK</td>
+      <td>OVEREXPOSED</td>
+      <td>NaN</td>
+      <td><span class="status-fail">FAIL</span></td>
+      <td>OVEREXPOSED</td>
+    </tr>
+    <tr>
+      <td>broken.jpg</td>
+      <td>image</td>
+      <td>DECODE_FAILED</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NOT_RUN</td>
+      <td>NOT_RUN</td>
+      <td>NOT_RUN</td>
+      <td>NaN</td>
+      <td><span class="status-fail">FAIL</span></td>
+      <td>DECODE_FAILED</td>
+    </tr>
+    <tr>
+      <td>dark.jpg</td>
+      <td>image</td>
+      <td>OK</td>
+      <td>4032.0</td>
+      <td>3024.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2.28</td>
+      <td>45.75</td>
+      <td>OK</td>
+      <td>BLURRY</td>
+      <td>UNDEREXPOSED</td>
+      <td>NaN</td>
+      <td><span class="status-fail">FAIL</span></td>
+      <td>BLURRY; UNDEREXPOSED</td>
+    </tr>
+    <tr>
+      <td>low_resolution.jpg</td>
+      <td>image</td>
+      <td>OK</td>
+      <td>640.0</td>
+      <td>480.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1026.92</td>
+      <td>130.57</td>
+      <td>RESOLUTION_TOO_LOW</td>
+      <td>OK</td>
+      <td>OK</td>
+      <td>NaN</td>
+      <td><span class="status-fail">FAIL</span></td>
+      <td>RESOLUTION_TOO_LOW</td>
+    </tr>
+    <tr>
+      <td>test_backup.jpg</td>
+      <td>image</td>
+      <td>OK</td>
+      <td>4032.0</td>
+      <td>3024.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>14.20</td>
+      <td>130.65</td>
+      <td>OK</td>
+      <td>OK</td>
+      <td>OK</td>
+      <td>NaN</td>
+      <td><span class="status-pass">PASS</span></td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>broken_video.mp4</td>
+      <td>video</td>
+      <td>OPEN_FAILED</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NOT_RUN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NOT_RUN</td>
+      <td><span class="status-fail">FAIL</span></td>
+      <td>OPEN_FAILED</td>
+    </tr>
+    <tr>
+      <td>empty_video.mp4</td>
+      <td>video</td>
+      <td>OPEN_FAILED</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NOT_RUN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NOT_RUN</td>
+      <td><span class="status-fail">FAIL</span></td>
+      <td>OPEN_FAILED</td>
+    </tr>
+    <tr>
+      <td>low_resolution_video.mp4</td>
+      <td>video</td>
+      <td>OK</td>
+      <td>640.0</td>
+      <td>480.0</td>
+      <td>30.0</td>
+      <td>460.0</td>
+      <td>15.33</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>RESOLUTION_TOO_LOW</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>OK</td>
+      <td><span class="status-fail">FAIL</span></td>
+      <td>RESOLUTION_TOO_LOW</td>
+    </tr>
+    <tr>
+      <td>test_video.mp4</td>
+      <td>video</td>
+      <td>OK</td>
+      <td>960.0</td>
+      <td>544.0</td>
+      <td>30.0</td>
+      <td>460.0</td>
+      <td>15.33</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>RESOLUTION_TOO_LOW</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>OK</td>
+      <td><span class="status-fail">FAIL</span></td>
+      <td>RESOLUTION_TOO_LOW</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+
+<div class="footer">
+
+SmartVisionQA 为多媒体自动化测试原型。
+模糊、曝光等指标为实验性规则，
+不代表工业级画质评价标准。
+
+</div>
+
+</div>
+
+</body>
+
+</html>

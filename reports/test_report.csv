@@ -1,0 +1,11 @@
+﻿filename,file_type,io_status,width,height,fps,frame_count,duration,blur_score,brightness_score,resolution_status,blur_status,exposure_status,fps_status,verdict,failure_reason
+blurred.jpg,image,OK,4032.0,3024.0,,,,5.54,130.64,OK,BLURRY,OK,N/A,FAIL,BLURRY
+bright.jpg,image,OK,4032.0,3024.0,,,,436.87,230.02,OK,OK,OVEREXPOSED,N/A,FAIL,OVEREXPOSED
+broken.jpg,image,DECODE_FAILED,,,,,,,,NOT_RUN,NOT_RUN,NOT_RUN,N/A,FAIL,DECODE_FAILED
+dark.jpg,image,OK,4032.0,3024.0,,,,73.82,45.75,OK,OK,UNDEREXPOSED,N/A,FAIL,UNDEREXPOSED
+low_resolution.jpg,image,OK,640.0,480.0,,,,2388.3,130.57,RESOLUTION_TOO_LOW,OK,OK,N/A,FAIL,RESOLUTION_TOO_LOW
+test_backup.jpg,image,OK,4032.0,3024.0,,,,59.23,130.65,OK,OK,OK,N/A,PASS,
+broken_video.mp4,video,OPEN_FAILED,,,,,,,,NOT_RUN,N/A,N/A,NOT_RUN,FAIL,OPEN_FAILED
+empty_video.mp4,video,OPEN_FAILED,,,,,,,,NOT_RUN,N/A,N/A,NOT_RUN,FAIL,OPEN_FAILED
+low_resolution_video.mp4,video,OK,640.0,480.0,30.0,460.0,15.33,,,RESOLUTION_TOO_LOW,N/A,N/A,OK,FAIL,RESOLUTION_TOO_LOW
+test_video.mp4,video,OK,720.0,1280.0,29.0,90.0,3.1,,,OK,N/A,N/A,OK,PASS,

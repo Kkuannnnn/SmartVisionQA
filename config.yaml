@@ -1,0 +1,11 @@
+image:
+  min_width: 1920
+  min_height: 1080
+  blur_threshold: 20.0
+  dark_threshold: 70
+  bright_threshold: 200
+
+video:
+  min_width: 1280
+  min_height: 720
+  min_fps: 30
